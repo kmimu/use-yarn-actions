@@ -31,3 +31,10 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    # Runs a successful command
+    - name: exit 0
+      run: exit 0
+    
+    # Runs a fail command ( exit non-zero )
+    - name: exit 1
+      run: exit 1
