@@ -9,7 +9,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
+env:
+  RELESE_ENV: develop
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -20,6 +21,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: echo env
+      run: echo ${WITH_VARIABLE}
+      env:
+        WITH_VARIABLE: hoge-${{ env.RELESE_ENV }}-fuga
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJSON(github) }}
