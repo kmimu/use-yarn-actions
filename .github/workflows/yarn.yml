@@ -1,9 +1,9 @@
 name: Node.js with yarn CI
 on:
   push:
-    branches: [ master ]
+    branches: [ release ]
   pull_request:
-    branches: [ master ]
+    branches: [ release ]
 jobs:
   build:
     name: Test
