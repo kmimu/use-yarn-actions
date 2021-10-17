@@ -21,7 +21,7 @@ jobs:
     steps:
     - name: echo variables
       run: |
-        echo ${{ fromJSON(github) }}
+        echo ${{ toJSON(github) }}
         
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
