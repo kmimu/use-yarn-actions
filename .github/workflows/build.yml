@@ -24,7 +24,7 @@ jobs:
     - name: echo env
       run: echo ${{ WITH_VARIABLE }}
       with:
-        with-variable: hoge-${{ release-env }}-fuga
+        with-variable: hoge-${{ env.RELESE_ENV }}-fuga
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJSON(github) }}
