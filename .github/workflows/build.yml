@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: echo env
-      run: echo ${{ WITH_VARIABLE }}
+      run: echo ${WITH_VARIABLE}
       with:
         with-variable: hoge-${{ env.RELESE_ENV }}-fuga
     - name: Dump GitHub context
