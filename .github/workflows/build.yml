@@ -23,8 +23,8 @@ jobs:
     steps:
     - name: echo env
       run: echo ${WITH_VARIABLE}
-      with:
-        with-variable: hoge-${{ env.RELESE_ENV }}-fuga
+      env:
+        WITH_VARIABLE: hoge-${{ env.RELESE_ENV }}-fuga
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJSON(github) }}
